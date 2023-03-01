@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CityButtons from './components/CityButtons';
 import CitySearch from './components/CitySearch';
