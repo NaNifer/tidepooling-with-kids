@@ -17,10 +17,10 @@ export default function Header() {
   const handleShow = () => setShow(true);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="none" className="font-light" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          <img src={Cartoon} alt="logo" />
+          {/* <img src={Cartoon} alt="logo" /> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

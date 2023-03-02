@@ -27,7 +27,7 @@ function CityButtons() {
   return (
     <div className="flex items-center justify-around my-6">
       {cities.map((city) => (
-        <button key={city.id} className="text-white text-large f">
+        <button key={city.id} className="text-white text-large">
           {city.title}
         </button>
       ))}
