@@ -10,6 +10,7 @@
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
+    "react-bootstrap-time-picker": "^2.0.1",
     "react-dom": "^18.2.0",
     "react-dropdown-timepicker": "^1.0.4",
     "react-scripts": "5.0.1",

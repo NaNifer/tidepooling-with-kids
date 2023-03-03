@@ -2,6 +2,8 @@ import React from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import TimePicker from "react-dropdown-timepicker";
 
+
+
 function CitySearch() {
   return (
     <div className="flex flex-row justify-center my-6">
@@ -29,8 +31,9 @@ function CitySearch() {
         {/* <TimePicker
           time={this.state.time}
           onChange={this.handleTimeChange.bind(this)}
-        />
-      </div> */}
+        /> */}
+        <TimePicker start="10:00" end="21:00" step={30} />
+      </div>
     </div>
   );
 }

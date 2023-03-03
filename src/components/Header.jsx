@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import Anemone from '../assets/sea-anemone-test.png'
-import Cartoon from "../assets/cartoon-anemone.png";
+// import Cartoon from "../assets/cartoon-anemone.png";
 import {
   Container,
   Nav,
