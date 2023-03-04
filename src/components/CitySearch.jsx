@@ -1,12 +1,13 @@
 import React from "react";
+import { useState } from "react";
+
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
-import TimePicker from "react-dropdown-timepicker";
+import TimeInput from "react-widgets/TimeInput";
 
-
-
-function CitySearch() {
+function CitySearch({ initialValue }) {
+  const [value, setValue] = useState(initialValue);
   return (
-    <div className="flex flex-row justify-center my-6">
+    <div className="flex flex-col justify-around my-6">
       <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
         <input
           type="text"
@@ -28,12 +29,8 @@ function CitySearch() {
           className="text-xl capitalize font-light p-2 w-full shadow-xl focus:outline-none placeholder:lowercase"
           placeholder="enter city for data..."
         />
-        {/* <TimePicker
-          time={this.state.time}
-          onChange={this.handleTimeChange.bind(this)}
-        /> */}
-        <TimePicker start="10:00" end="21:00" step={30} />
       </div>
+      <TimeInput value={value} onChange={(value) => setValue(value)} />
     </div>
   );
 }
@@ -41,3 +38,4 @@ function CitySearch() {
 export default CitySearch;
 
 // https://jdewit.github.io/bootstrap-timepicker/
+// https://jquense.github.io/react-widgets/docs/TimeInput
