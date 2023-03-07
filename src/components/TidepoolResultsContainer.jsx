@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import TidepoolResults from './TidepoolResults';
+import TidepoolList from './TidepoolList';
 
 // Import search method
 import search from '../utils/API';
@@ -23,8 +23,8 @@ const TidepoolResultContainer = () => {
 
   return (
     <div>
-      {/* Pass our results to the TidepoolResults component to map over */}
-      <TidepoolResults results={results} />
+      {/* Pass our results to the TidepoolList component to map over */}
+      <TidepoolList results={results} />
     </div>
   );
 };
