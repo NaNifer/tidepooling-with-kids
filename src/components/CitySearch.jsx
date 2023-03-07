@@ -3,9 +3,12 @@ import { useState } from "react";
 
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import TimeInput from "react-widgets/TimeInput";
+import DatePicker from "react-widgets/DatePicker";
+
+
 
 function CitySearch({ initialValue }) {
-  // const [value, setValue] = useState(initialValue);
+  const [value, setValue] = useState(initialValue);
   return (
     <div className="flex flex-col justify-around my-6">
       <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
@@ -31,6 +34,7 @@ function CitySearch({ initialValue }) {
         />
       </div>
       <TimeInput value={value} onChange={(value) => setValue(value)} />
+      <DatePicker placeholder="m/dd/yy" />;
     </div>
   );
 }
