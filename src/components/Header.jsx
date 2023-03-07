@@ -1,6 +1,5 @@
 import { useState } from "react";
-// import Anemone from '../assets/sea-anemone-test.png'
-// import Cartoon from "../assets/cartoon-anemone.png";
+import Cartoon from "../assets/cartoon-anemone.png";
 import {
   Container,
   Nav,
@@ -20,7 +19,7 @@ export default function Header() {
     <Navbar bg="none" className="font-light" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          {/* <img src={Cartoon} alt="logo" /> */}
+          <img src={Cartoon} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -58,7 +57,7 @@ export default function Header() {
                 Close
               </Button>
               <Button variant="primary" onClick={handleClose}>
-                Enter
+                View
               </Button>
             </Modal.Body>
           </Modal>
