@@ -1,11 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
-import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
-import TimeInput from "react-widgets/TimeInput";
+import { UilLocationPoint, UilSearch } from "@iconscout/react-unicons";
 import DatePicker from "react-widgets/DatePicker";
-
-
+import TimeInput from "react-widgets/TimeInput";
 
 function CitySearch({ initialValue }) {
   const [value, setValue] = useState(initialValue);
@@ -34,6 +31,12 @@ function CitySearch({ initialValue }) {
         />
       </div>
       <TimeInput value={value} onChange={(value) => setValue(value)} />
+      <h1>Choose which days of the week that work with your schedule:</h1>
+      <Multiselect
+        defaultValue={["Saturday"]}
+        data={["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]}
+      />
+      ;
       <DatePicker placeholder="m/dd/yy" />;
     </div>
   );
