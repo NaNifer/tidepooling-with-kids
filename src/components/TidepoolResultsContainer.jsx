@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import TidepoolList from './TidepoolList';
 
 // Import search method
-import search from '../utils/API';
+import tidalAPI from '../utils/tidalAPI';
 
 
 const TidepoolResultContainer = () => {
@@ -11,7 +11,7 @@ const TidepoolResultContainer = () => {
 
   // Method to get search results and set state
   const searchTidepools = async (query) => {
-    const response = await search(query);
+    const response = await tidalAPI(query);
     setResults(response.data.data);
   };
 
