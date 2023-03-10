@@ -8,7 +8,7 @@ function ResultsPage(props) {
    <div>
     <CityButtons />
     <CitySearch />
-    <TidepoolResultContainer />
+    {/* <TidepoolResultContainer /> */}
    </div>
   );
 }
