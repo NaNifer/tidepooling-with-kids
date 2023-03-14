@@ -1,9 +1,22 @@
-// Axios is a popular NPM package used for preforming API requests
 import axios from 'axios';
+require('dotenv').config();
 
-// Using axios, we create a search method that is specific to our use case and export it at the bottom
+const options = {
+  method: 'GET',
+  url: 'https://noaa-tides.p.rapidapi.com/stations/9411340/tides',
+  params: {date: '20220625'},
+  headers: {
+    'X-RapidAPI-Key': process.env.TIDE_APIKEY,
+    'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com'
+  }
+};
+
 const tidalAPI = (query) =>
-  axios.get(`https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=today&station=9414290&product=water_level&datum=MLLW&time_zone=gmt&units=english&application=DataAPI_Sample&format=xml`);
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
 
 // Export an object with a "search" method that searches the Giphy API for the passed query
 export default tidalAPI;
