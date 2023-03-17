@@ -15,6 +15,13 @@ const queryClient = new QueryClient();
 
 
 function App() {
+  // API request
+  // const getRepoIssues = async (repo) => {
+  //   let issuesURL = `XXX`;
+  //   const response = await fetch(issuesURL);
+  //   const data = await response.json();
+  //   setIssues(data);
+
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
