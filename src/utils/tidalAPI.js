@@ -3,15 +3,6 @@ require('dotenv').config();
 // import {useQuery} from 'react-query';
 
 
-// const options = {
-//   method: 'GET',
-//   url: 'https://noaa-tides.p.rapidapi.com/stations/9411340/tides',
-//   params: { date: '20220625' },
-//   headers: {
-//     'X-RapidAPI-Key': process.env.TIDE_APIKEY,
-//     'X-RapidAPI-Host': 'noaa-tides.p.rapidapi.com'
-//   }
-// };
 
 const tidalAPI = (options) =>
   axios.request(options).then(function (response) {
