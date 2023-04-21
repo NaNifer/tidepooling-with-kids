@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { 
-  // UilLocationPoint, 
-  UilSearch } from "@iconscout/react-unicons";
+import { UilSearch } from "@iconscout/react-unicons";
 import TimeRangePicker from "@wojtekmaj/react-timerange-picker";
 import "@wojtekmaj/react-timerange-picker/dist/TimeRangePicker.css";
 import "react-clock/dist/Clock.css";
+
+
+const convert = require('convert-zip-to-gps');
+
+// Called function will return GPS coordinates for valid U.S. 5-digit ZIP codes, entered as integers or strings.
+const zip = 97230;
+convert.zipConvert(zip);
+
+
 
 function CitySearch({ initialValue }) {
   const [value, onChange] = useState(["10:00", "12:00"]);

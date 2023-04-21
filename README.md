@@ -44,6 +44,8 @@ THEN I see a table of dates, times, and locations for tidepooling.
 
 
  ## Useful Resources
+ https://github.com/JaredReando/convert-zip-to-gps#readme
+ 
 
 
 
@@ -61,11 +63,6 @@ THEN I see a table of dates, times, and locations for tidepooling.
     <img src="https://img.shields.io/badge/-node.js-green"/>
     <img src="https://img.shields.io/badge/react-blue"/>
     <img src="https://img.shields.io/badge/-json-orange"/>
-    <!-- <img src="https://img.shields.io/badge/mysql2-magenta"/>
-    <img src="https://img.shields.io/badge/sequelize-darkblue"/>
-    <img src="https://img.shields.io/badge/express-handlebars-red"/>
-    <img src="https://img.shields.io/badge/-bcryptjs-red"/>
-    <img src="https://img.shields.io/badge/nes.css-darkblue"/> -->
      <img src="https://img.shields.io/badge/bootstrap-darkblue"/>
     
 </p>
