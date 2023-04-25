@@ -11,5 +11,4 @@ const tidalAPI = (options) =>
     console.error(error);
   });
 
-// Export an object with a "search" method that searches the Giphy API for the passed query
 export default tidalAPI;
