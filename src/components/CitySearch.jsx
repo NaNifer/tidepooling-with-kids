@@ -8,7 +8,6 @@ import "react-clock/dist/Clock.css";
 
 
 const convert = require('convert-zip-to-gps');
-
 // Called function will return GPS coordinates for valid U.S. 5-digit ZIP codes, entered as integers or strings.
 const zip = 97230;
 convert.zipConvert(zip);
