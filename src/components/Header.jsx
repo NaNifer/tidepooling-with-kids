@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Cartoon from "../assets/cartoon-anemone.png";
 import {
   Container,
@@ -9,14 +9,31 @@ import {
   Form,
   Modal,
 } from "react-bootstrap";
+import axios from 'axios';
+require('dotenv').config();
+
+
 
 
 
 
 export default function Header() {
+  const {data, setData} = useState({});
+  const {location, setLocation} = useState('');
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
+  const requestGeo = `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${process.env.DIRECT_APIKEY}`;
+
+  const searchLocation = (event) => {
+    if (event.key === 'Enter') {
+      axios.get(requestGeo).then((response) => {
+        setData(response.data)
+        console.log(response.data)
+      })
+    }
+  }
 
   return (
     <Navbar bg="none" className="font-light" expand="lg">
@@ -50,7 +67,9 @@ export default function Header() {
                 >
                   <Form.Label>Enter city for current conditions</Form.Label>
                   <Form.Control
-                    type="email"
+                    type="text"
+                    value={location}
+                    onChange={event => setLocation(event.target.value)}
                     placeholder="e.g., Half Moon Bay"
                     autoFocus
                   />
