@@ -15,6 +15,7 @@ import ResultsPage from './components/ResultsPage';
 
 
 function App() {
+  console.log('APP');
   // API request
   // const getRepoIssues = async (repo) => {
   //   let issuesURL = `XXX`;

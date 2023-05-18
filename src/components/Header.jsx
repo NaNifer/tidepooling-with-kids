@@ -10,21 +10,17 @@ import {
   Modal,
 } from "react-bootstrap";
 import axios from 'axios';
-require('dotenv').config();
-
-
-
-
 
 
 export default function Header() {
+  console.log('HEADER');
   const {data, setData} = useState({});
   const {location, setLocation} = useState('');
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   
-  const requestGeo = `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${process.env.DIRECT_APIKEY}`;
+  const requestGeo = `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${process.env.REACT_APP_DIRECT_APIKEY}`;
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
